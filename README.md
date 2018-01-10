@@ -1,2 +1,2 @@
 # shineEventBrowser
-NA61 SHINE project eventBrowser
+NA61 SHINE project eventBrowser.
