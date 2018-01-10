@@ -1,0 +1,28 @@
+#xinfo{
+    position: absolute;
+    top: 5vh;
+    color: red;
+    font-weight: bold;
+    font-size: 1.5vh;
+}
+#yinfo{
+    position: absolute;
+    top: 7vh;
+    color: red;
+    font-weight: bold;
+    font-size: 1.5vh;
+}
+#zinfo{
+    position: absolute;
+    top: 9vh;
+    color: red;
+    font-weight: bold;
+    font-size: 1.5vh;
+}
+#dinfo{
+    position: absolute;
+    top: 11vh;
+    color: red;
+    font-weight: bold;
+    font-size: 1.5vh;
+}
