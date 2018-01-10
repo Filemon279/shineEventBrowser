@@ -1,5 +1,73 @@
 <template name="eventBrowserLayout">
 
-<br>Test template eventBrowser
+ <div id="vrLine"></div>
+    <div id="logo_cern"><a href="http://home.cern"><img src="cern_png.png"></a><a href="http://shine.web.cern.ch"><img src="na61_png.png"></a></div>
+    <div id="chooseFileDiv">
 
+    <center>
+    <p id="title">3D SHINE/NA61 eventBrowser </p> 
+    <p>Choose Collision</p> 
+
+    <button onclick="choosenFile='Ar_Sc_150'">Ar + Sc</button>
+    <button onclick="choosenFile='Pb_Pb_3'">Pb + Pb</button>
+    <button onclick="choosenFile='La_Xe_150'">La + Xe</button><br>
+    <p>VR Cardboard</p>
+    <img onclick="vrTest=1" id="vrIcon" src="vr_icon.png"> 
+    </center>
+    </div>
+
+    <div id="borderRunInfo">
+    <div id="runInfo">
+    <p id="title">RUN INFORMATIONS</p>
+    </div>
+    </div>
+
+    <div id="colorsPaletteDisplay">
+    <b style="color:white;background-color:black">Energy Deposit (dE/dx)</b>
+        <table>
+        <tr id="colorValues">
+        
+        </tr>
+        <tr id="stepValues">
+        
+        </tr>
+        </table>
+    </div>
+   
+    <div id="autorInfo">&copy; Filip Michalski & Taras Palayda</div>
+
+
+    <div id="container"></div>
+<script>
+    $("#logo_cern").fadeIn(1,function()
+    {
+        $("#logo_cern img").animate({
+        height: ($(this).height()*0.4),
+        width: ($(this).width()*0.2)},1500)
+        $("#logo_cern").animate({
+            top: "80vh"
+        },2,function(){
+            $("#chooseFileDiv").fadeIn(1,function()
+            {
+                $("#chooseFileDiv button,#chooseFileDiv img").click(function()
+                {
+                    $("#logo_cern").fadeOut(1);
+                    $("#chooseFileDiv").fadeOut(1,function()
+                    {
+                            if(clicked==0)
+                            {
+                                clicked++;
+                                init();
+                                animate();
+                            }
+                    });
+                });
+            });
+        })
+    });
+
+var clicked = 0
+
+
+</script>
 </template>

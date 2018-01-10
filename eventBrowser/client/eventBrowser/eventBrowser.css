@@ -1,28 +1,224 @@
-#xinfo{
-    position: absolute;
-    top: 5vh;
-    color: red;
-    font-weight: bold;
-    font-size: 1.5vh;
+
+body {
+    font-family: Monospace;
+    background-color: #000000;
+    margin: 0px;
+    overflow: hidden;
+
+-webkit-touch-callout: none; /* iOS Safari */
+-webkit-user-select: none; /* Chrome/Safari/Opera */
+-khtml-user-select: none; /* Konqueror */
+-moz-user-select: none; /* Firefox */
+-ms-user-select: none; /* Internet Explorer/Edge */
+user-select: none; /* Non-prefixed version, currently
+                     not supported by any browser */    
 }
-#yinfo{
+
+
+#autorInfo
+{
     position: absolute;
-    top: 7vh;
-    color: red;
-    font-weight: bold;
-    font-size: 1.5vh;
+    right: 1vh;
+    color: #909090;
+    bottom: 1vh;
+    font-size: 1vh;
 }
-#zinfo{
+
+#colorsPaletteDisplay
+{
     position: absolute;
-    top: 9vh;
-    color: red;
-    font-weight: bold;
-    font-size: 1.5vh;
+    bottom: 1%;
+    left: 1%;
+    border-radius: 0.5vh;
+    margin: 0.3vh;
+    width: auto;
+    height: auto;
+  
 }
-#dinfo{
+
+#colorsPaletteDisplay table, th, td {
+    border: 1px solid black;
+    background-color: rgba(0, 215, 250,0.1);
+}
+
+
+#inset  {
+    width: 80px;
+    height: 80px;
+    background-color: rgba(0,0,0,0);/* or transparent; will show through only if renderer alpha: true */
+    border: 1px solid black; /* or none; */
+    margin: 20px;
+    padding: 0px;
     position: absolute;
-    top: 11vh;
-    color: red;
+    left: 0px;
+    bottom: 0px;
+    z-index: 100;
+
+}
+
+#container {
+    display: none;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+
+#logo_cern
+{
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+#logo_cern img
+{
+    width: 13vh;
+    height: 13vh;
+    padding: 3vh;
+}
+
+
+#chooseFileDiv
+{
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+     min-width: 35vh;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+}
+
+#chooseFileDiv p
+{
+    font-family: 'Orbitron', sans-serif;
+    color: #99ccff;
+    font-size: 3vh;
+}
+
+#chooseFileDiv p[id="title"]
+{
+    font-family: 'Orbitron', sans-serif;
+    color: #ffffff;
+    margin-bottom: 10vh;
+    font-size: 4vh;
+}
+
+#chooseFileDiv button
+{
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+    border-radius: 0.5vh;
+    background-color: #0066cc;
+    padding: 1vh;
+    padding-left: 1vh;
+    padding-right: 1vh;
+    margin: 1.4vh;
+    border: none;
+    min-width: 15vh;
+    outline:none;
+    font-size: 1.2vh;
+    box-shadow: 0.2vh 0.2vh 0.2vh #888888;
+}
+
+#chooseFileDiv button:hover
+{
+    background-color: #004d99;
+    border: none;
+    outline:none;
+}
+
+#chooseFileDiv button:active
+{
+    background-color: #003366;
+    border: none;
+    outline:none;
+}
+
+.borderButton
+{
+    border-radius: 1vh;
+    border: solid 0.3vh #0073e6;
+    background-color: rgba(0, 115, 230,0.5);
+    margin: 0.4vh;
+}
+
+#chooseFileDiv img
+{
+width: 8vh;
+height: 8vh;
+}
+
+
+#borderRunInfo
+{
+    display: none;
+    border-radius: 0.8vh;
+    border: solid 0.3vh #0073e6;
+    margin: 1vh;
+    position: absolute;
+}
+
+#runInfo
+{
+    border-radius: 0.5vh;
+    margin: 0.5vh;
+    width: 40vh;
+    height: auto;
+    background-color: rgba(0, 215, 250,0.1);
+}
+
+#runInfo p[id="title"]
+{
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 1vh;
+    font-size: 1.4vh;
+}
+
+#runInfo p[id="Desc"]
+{
     font-weight: bold;
-    font-size: 1.5vh;
+    display: inline-block;
+    color: white;
+    margin: 0;
+    padding: 1vh;
+    font-size: 1.3vh;
+}
+
+#runInfo p[id="Info"]
+{
+    display: inline-block;
+    color: white;
+    margin: 0;
+    padding: 1vh;
+    font-size: 1.3vh;
+}
+
+
+#vrIcon:hover
+{
+ opacity: 0.9;
+}
+#vrIcon:active
+{
+ opacity: 0.8;
+}
+#vrLine
+{
+    display: none;
+    position: absolute;
+    left: 50%;
+    height: 8vh;
+    width: 1px;
+    background-color: white;
+    bottom: 0;
 }
